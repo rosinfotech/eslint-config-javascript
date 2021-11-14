@@ -193,13 +193,13 @@ module.exports = {
             }
         ],
         "import/prefer-default-export": 0,
-        "import/unambiguous": 2,        
+        "import/unambiguous": 2,
         "indent": [
             1,
             4,
             {
-                "SwitchCase": 1,
-                "ignoreComments": false
+                "ignoreComments": false,
+                "SwitchCase": 1
             }
         ],
         "key-spacing": [
@@ -276,7 +276,7 @@ module.exports = {
         "no-magic-numbers": [
             1,
             {
-                "ignore":[
+                "ignore": [
                     -1,
                     0,
                     1
@@ -588,7 +588,21 @@ module.exports = {
             1,
             "last"
         ],
-        "sort-imports": 0,
+        "sort-imports": [
+            1,
+            {
+                "allowSeparatedGroups": false,
+                "ignoreCase": false,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": [
+                    "none",
+                    "all",
+                    "multiple",
+                    "single"
+                ]
+            }
+        ],
         "sort-vars": 1,
         "space-before-blocks": [
             1,
@@ -648,4 +662,4 @@ module.exports = {
         ],
         "yoda": 2
     }
-}
+};
