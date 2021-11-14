@@ -1,6 +1,6 @@
 {
     "name": "@rosinfo.tech/eslint-config-javascript",
-    "version": "0.0.16",
+    "version": "0.0.17",
     "access": "public",
     "main": "index.js",
     "publishConfig": {
@@ -19,9 +19,7 @@
         "rosinfotech"
     ],
     "dependencies": {
-        "eslint-plugin-import": "^2.25.2",
-        "eslint-plugin-react": "^7.26.1",
-        "eslint-plugin-react-hooks": "^4.2.0"
+        "eslint-plugin-import": "^2.25.2"
     },
     "peerDependencies": {
         "eslint": ">= 3"
