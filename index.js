@@ -84,10 +84,7 @@ module.exports = {
             1,
             "consistent"
         ],
-        "function-paren-newline": [
-            1,
-            "consistent"
-        ],
+        "function-paren-newline": 0,
         "generator-star-spacing": [
             1,
             {
