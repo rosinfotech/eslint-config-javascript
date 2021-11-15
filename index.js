@@ -113,7 +113,7 @@ module.exports = {
                 "multiLine": {
                     "afterColon": true,
                     "align": "colon",
-                    "beforeColon": true
+                    "beforeColon": false
                 },
                 "singleLine": {
                     "afterColon": true,
@@ -239,16 +239,16 @@ module.exports = {
             1,
             {
                 "ExportDeclaration": {
-                    "multiline": true
+                    "consistent": true
                 },
                 "ImportDeclaration": {
-                    "multiline": true
+                    "consistent": true
                 },
                 "ObjectExpression": {
-                    "multiline": true
+                    "consistent": true
                 },
                 "ObjectPattern": {
-                    "multiline": true
+                    "consistent": true
                 }
             }
         ],
