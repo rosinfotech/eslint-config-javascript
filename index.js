@@ -127,7 +127,7 @@ module.exports = {
             }
         ],
         "linebreak-style": [
-            1,
+            2,
             "unix"
         ],
         "lines-around-comment": [
@@ -178,11 +178,16 @@ module.exports = {
         "no-magic-numbers": [
             1,
             {
+                "detectObjects": true,
+                "enforceConst": true,
                 "ignore": [
                     -1,
                     0,
                     1
-                ]
+                ],
+                "ignoreArrayIndexes": true,
+                "ignoreClassFieldInitialValues": true,
+                "ignoreDefaultValues": true,
             }
         ],
         "no-mixed-operators": 0,
