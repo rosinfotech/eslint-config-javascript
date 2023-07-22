@@ -187,7 +187,7 @@ module.exports = {
                 ],
                 "ignoreArrayIndexes": true,
                 "ignoreClassFieldInitialValues": true,
-                "ignoreDefaultValues": true,
+                "ignoreDefaultValues": true
             }
         ],
         "no-mixed-operators": 0,
