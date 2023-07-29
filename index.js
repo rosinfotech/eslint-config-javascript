@@ -287,7 +287,7 @@ module.exports = {
         ],
         "operator-linebreak": [
             1,
-            "after",
+            "before",
             {
                 "overrides": {
                     ":": "before",
