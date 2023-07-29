@@ -495,6 +495,12 @@ module.exports = {
             1,
             "last"
         ],
+        "sort-destructure-keys/sort-destructure-keys": [
+            2,
+            {
+                caseSensitive: true
+            }
+        ],
         "sort-imports": [
             1,
             {
@@ -508,6 +514,16 @@ module.exports = {
                     "multiple",
                     "single"
                 ]
+            }
+        ],
+        "sort-keys": [
+            2,
+            "asc",
+            {
+                allowLineSeparatedGroups: true,
+                caseSensitive: true,
+                minKeys: 2,
+                natural: false
             }
         ],
         "sort-vars": 1,
