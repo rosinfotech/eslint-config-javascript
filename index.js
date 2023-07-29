@@ -520,10 +520,10 @@ module.exports = {
             2,
             "asc",
             {
-                allowLineSeparatedGroups: true,
-                caseSensitive: true,
-                minKeys: 2,
-                natural: false
+                "allowLineSeparatedGroups": true,
+                "caseSensitive": true,
+                "minKeys": 2,
+                "natural": false
             }
         ],
         "sort-vars": 1,
