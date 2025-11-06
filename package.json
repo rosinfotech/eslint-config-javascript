@@ -1,6 +1,6 @@
 {
     "name": "@rosinfo.tech/eslint-config-javascript",
-    "version": "0.0.27",
+    "version": "0.0.28",
     "access": "public",
     "main": "index.js",
     "publishConfig": {
@@ -19,9 +19,10 @@
         "rosinfotech"
     ],
     "dependencies": {
-        "eslint-plugin-sort-destructure-keys": "^1.5.0"
+        "eslint-plugin-perfectionist": "^4.15.0"
     },
     "peerDependencies": {
-        "eslint": ">= 3"
+        "eslint": ">= 9.0.0",
+        "eslint-plugin-perfectionist": "^4.15.0"
     }
 }

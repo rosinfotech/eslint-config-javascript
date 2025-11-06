@@ -1,588 +1,337 @@
-module.exports = {
-    "rules": {
-        "array-bracket-newline": [
-            1,
+import perfectionistPlugin from 'eslint-plugin-perfectionist';
+
+
+export default {
+    plugins: {
+        perfectionist: perfectionistPlugin,
+    },
+
+    disabledRules: {
+        'function-paren-newline'      : 'off',
+        'keyword-spacing'             : 'off',
+        'one-var-declaration-per-line': 'off',
+        'perfectionist/sort-imports'  : 'off',
+        'quote-props'                 : 'off',
+        'quotes'                      : 'off',
+        'semi'                        : 'off',
+        'semi-spacing'                : 'off',
+        'sort-imports'                : 'off',
+        'sort-keys'                   : 'off',
+        'space-before-function-paren' : 'off',
+    },
+
+    rules: {
+        'perfectionist/sort-interfaces': [
+            'error',
             {
-                "multiline": true
-            }
+                fallbackSort: { order: 'asc', type: 'alphabetical' },
+                ignoreCase  : false,
+                order       : 'asc',
+                type        : 'alphabetical',
+            },
         ],
-        "array-bracket-spacing": [
-            1,
-            "always",
+        'perfectionist/sort-jsx-props': [
+            'error',
             {
-                "arraysInArrays": true,
-                "singleValue": true
-            }
+                fallbackSort: { order: 'asc', type: 'alphabetical' },
+                ignoreCase  : false,
+                order       : 'asc',
+                type        : 'alphabetical',
+            },
         ],
-        "array-element-newline": [
-            1,
-            "consistent"
-        ],
-        "arrow-body-style": [
-            1,
-            "as-needed"
-        ],
-        "arrow-parens": [
-            1,
-            "as-needed",
+        'perfectionist/sort-objects': [
+            'error',
             {
-                "requireForBlockBody": true
-            }
+                fallbackSort      : { order: 'asc', type: 'alphabetical' },
+                ignoreCase        : false,
+                objectDeclarations: true,
+                order             : 'asc',
+                type              : 'alphabetical',
+            },
         ],
-        "arrow-spacing": 1,
-        "block-spacing": [
-            1,
-            "always"
-        ],
-        "brace-style": [
-            1,
-            "1tbs"
-        ],
-        "comma-dangle": [
-            1,
+
+        'curly'                         : ['error', 'multi-line'],
+        'function-call-argument-newline': ['warn', 'consistent'],
+        'key-spacing'                   : [
+            'warn',
             {
-                "arrays": "always-multiline",
-                "exports": "always-multiline",
-                "functions": "always-multiline",
-                "imports": "always-multiline",
-                "objects": "always-multiline"
-            }
-        ],
-        "comma-spacing": [
-            1,
-            {
-                "after": true,
-                "before": false
-            }
-        ],
-        "comma-style": [
-            1,
-            "last"
-        ],
-        "computed-property-spacing": [
-            1,
-            "always"
-        ],
-        "curly": [
-            1,
-            "all"
-        ],
-        "dot-notation": 1,
-        "eol-last": [
-            1,
-            "always"
-        ],
-        "eqeqeq": [
-            1,
-            "smart"
-        ],
-        "func-call-spacing": [
-            1,
-            "never"
-        ],
-        "function-call-argument-newline": [
-            1,
-            "consistent"
-        ],
-        "function-paren-newline": 0,
-        "generator-star-spacing": [
-            1,
-            {
-                "after": true,
-                "before": false
-            }
-        ],
-        "implicit-arrow-linebreak": [
-            1,
-            "beside"
-        ],
-        "indent": [
-            1,
-            4,
-            {
-                "ignoreComments": false,
-                "SwitchCase": 1
-            }
-        ],
-        "key-spacing": [
-            1,
-            {
-                "multiLine": {
-                    "afterColon": true,
-                    "align": "colon",
-                    "beforeColon": false
+                multiLine: {
+                    afterColon : true,
+                    align      : 'colon',
+                    beforeColon: false,
                 },
-                "singleLine": {
-                    "afterColon": true,
-                    "beforeColon": false,
-                    "mode": "strict"
-                }
-            }
-        ],
-        "keyword-spacing": [
-            1,
-            {
-                "after": true,
-                "before": true
-            }
-        ],
-        "linebreak-style": [
-            2,
-            "unix"
-        ],
-        "lines-around-comment": [
-            1,
-            {
-                "afterBlockComment": true,
-                "allowArrayEnd": false,
-                "allowArrayStart": true,
-                "allowBlockEnd": false,
-                "allowBlockStart": true,
-                "allowClassEnd": false,
-                "allowClassStart": true,
-                "allowObjectEnd": false,
-                "allowObjectStart": true,
-                "beforeBlockComment": true
-            }
-        ],
-        "lines-between-class-members": [
-            1,
-            "always"
-        ],
-        "multiline-comment-style": 0,
-        "new-parens": 1,
-        "newline-per-chained-call": 0,
-        "no-confusing-arrow": 0,
-        "no-else-return": [
-            1,
-            {
-                "allowElseIf": true
-            }
-        ],
-        "no-extra-bind": 1,
-        "no-extra-label": 1,
-        "no-floating-decimal": 1,
-        "no-implicit-coercion": [
-            1,
-            {
-                "allow": [
-                    "!!",
-                    "~"
-                ],
-                "boolean": true,
-                "number": true,
-                "string": true
-            }
-        ],
-        "no-lonely-if": 1,
-        "no-magic-numbers": [
-            1,
-            {
-                "detectObjects": true,
-                "enforceConst": true,
-                "ignore": [
-                    -1,
-                    0,
-                    1
-                ],
-                "ignoreArrayIndexes": true,
-                "ignoreClassFieldInitialValues": true,
-                "ignoreDefaultValues": true
-            }
-        ],
-        "no-mixed-operators": 0,
-        "no-multi-spaces": 1,
-        "no-multiple-empty-lines": [
-            1,
-            {
-                "max": 1,
-                "maxBOF": 0,
-                "maxEOF": 1
-            }
-        ],
-        "no-return-await": 1,
-        "no-trailing-spaces": 1,
-        "no-undef-init": 1,
-        "no-unneeded-ternary": [
-            1,
-            {
-                "defaultAssignment": false
-            }
-        ],
-        "no-unused-expressions": [
-            1,
-            {
-                "allowShortCircuit": true,
-                "allowTaggedTemplates": false,
-                "allowTernary": false
-            }
-        ],
-        "no-unused-labels": 1,
-        "no-unused-vars": 1,
-        "no-use-before-define": [
-            1,
-            {
-                "classes": false,
-                "functions": false,
-                "variables": true
-            }
-        ],
-        "no-useless-computed-key": 1,
-        "no-useless-constructor": 1,
-        "no-useless-rename": 1,
-        "no-useless-return": 1,
-        "no-var": 1,
-        "no-whitespace-before-property": 1,
-        "nonblock-statement-body-position": [
-            1,
-            "beside"
-        ],
-        "object-curly-newline": [
-            1,
-            {
-                "ExportDeclaration": {
-                    "consistent": true
+                singleLine: {
+                    afterColon : true,
+                    beforeColon: false,
+                    mode       : 'strict',
                 },
-                "ImportDeclaration": {
-                    "consistent": true
+            },
+        ],
+        'no-implicit-coercion': [
+            'warn',
+            {
+                allow  : ['!!', '~'],
+                boolean: true,
+                number : true,
+                string : true,
+            },
+        ],
+        'no-multiple-empty-lines': [
+            'error',
+            {
+                max   : 2,
+                maxBOF: 0,
+                maxEOF: 1,
+            },
+        ],
+        'no-undef'            : 'error',
+        'object-curly-newline': [
+            'warn',
+            {
+                ExportDeclaration: {
+                    consistent: true,
                 },
-                "ObjectExpression": {
-                    "consistent": true
+                ImportDeclaration: {
+                    consistent: true,
                 },
-                "ObjectPattern": {
-                    "consistent": true
-                }
-            }
+                ObjectExpression: {
+                    consistent: true,
+                },
+                ObjectPattern: {
+                    consistent: true,
+                },
+            },
         ],
-        "object-curly-spacing": [
-            1,
-            "always",
+        'object-curly-spacing': [
+            'warn',
+            'always',
             {
-                "arraysInObjects": true,
-                "objectsInObjects": true
-            }
+                arraysInObjects : true,
+                objectsInObjects: true,
+            },
         ],
-        "object-property-newline": [
-            1,
+        'object-property-newline': [
+            'warn',
             {
-                "allowAllPropertiesOnSameLine": false
-            }
+                allowAllPropertiesOnSameLine: true,
+            },
         ],
-        "object-shorthand": [
-            1,
-            "always",
+        'object-shorthand': [
+            'warn',
+            'always',
             {
-                "avoidExplicitReturnArrows": true,
-                "avoidQuotes": true
-            }
+                avoidExplicitReturnArrows: true,
+                avoidQuotes              : true,
+            },
         ],
-        "one-var": [
-            1,
-            "never"
-        ],
-        "one-var-declaration-per-line": 0,
-        "operator-assignment": [
-            1,
-            "always"
-        ],
-        "operator-linebreak": [
-            1,
-            "before",
+        'one-var'            : ['warn', 'never'],
+        'operator-assignment': ['warn', 'always'],
+        'operator-linebreak' : [
+            'warn',
+            'before',
             {
-                "overrides": {
-                    ":": "before",
-                    "?": "before"
-                }
-            }
+                overrides: {
+                    ':': 'before',
+                    '?': 'before',
+                },
+            },
         ],
-        "padded-blocks": [
-            1,
+        'padded-blocks': [
+            'warn',
             {
-                "classes": "always"
-            }
+                classes: 'always',
+            },
         ],
-        "padding-line-between-statements": [
-            1,
+        'padding-line-between-statements': [
+            'warn',
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": [
-                    "const",
-                    "let",
-                    "var"
-                ]
+                blankLine: 'any',
+                next     : '*',
+                prev     : ['const', 'let', 'var'],
             },
             {
-                "blankLine": "any",
-                "next": [
-                    "const",
-                    "let",
-                    "var"
+                blankLine: 'any',
+                next     : ['const', 'let', 'var'],
+                prev     : '*',
+            },
+            {
+                blankLine: 'any',
+                next     : [
+                    'multiline-const',
+                    'multiline-let',
+                    'multiline-var',
+                    'multiline-expression',
+                    'multiline-block-like',
                 ],
-                "prev": "*"
+                prev: '*',
             },
             {
-                "blankLine": "any",
-                "next": [
-                    "multiline-const",
-                    "multiline-let",
-                    "multiline-var",
-                    "multiline-expression",
-                    "multiline-block-like"
+                blankLine: 'any',
+                next     : '*',
+                prev     : [
+                    'multiline-const',
+                    'multiline-let',
+                    'multiline-var',
+                    'multiline-expression',
+                    'multiline-block-like',
                 ],
-                "prev": "*"
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": [
-                    "multiline-const",
-                    "multiline-let",
-                    "multiline-var",
-                    "multiline-expression",
-                    "multiline-block-like"
-                ]
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'directive',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "directive"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'iife',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "iife"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'iife',
             },
             {
-                "blankLine": "any",
-                "next": "iife",
-                "prev": "*"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'if',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "if"
+                blankLine: 'any',
+                next     : 'if',
+                prev     : '*',
             },
             {
-                "blankLine": "any",
-                "next": "if",
-                "prev": "*"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'block-like',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "block-like"
+                blankLine: 'any',
+                next     : 'block-like',
+                prev     : '*',
             },
             {
-                "blankLine": "any",
-                "next": "block-like",
-                "prev": "*"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'export',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "export"
+                blankLine: 'any',
+                next     : 'export',
+                prev     : '*',
             },
             {
-                "blankLine": "any",
-                "next": "export",
-                "prev": "*"
+                blankLine: 'any',
+                next     : 'multiline-expression',
+                prev     : '*',
             },
             {
-                "blankLine": "any",
-                "next": "multiline-expression",
-                "prev": "*"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'multiline-expression',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "multiline-expression"
+                blankLine: 'any',
+                next     : ['break'],
+                prev     : 'multiline-expression',
             },
             {
-                "blankLine": "any",
-                "next": [
-                    "break"
-                ],
-                "prev": "multiline-expression"
+                blankLine: 'always',
+                next     : '*',
+                prev     : 'class',
             },
             {
-                "blankLine": "always",
-                "next": "*",
-                "prev": "class"
+                blankLine: 'always',
+                next     : 'class',
+                prev     : '*',
             },
             {
-                "blankLine": "always",
-                "next": "class",
-                "prev": "*"
+                blankLine: 'always',
+                next     : '*',
+                prev     : 'function',
             },
             {
-                "blankLine": "always",
-                "next": "*",
-                "prev": "function"
+                blankLine: 'always',
+                next     : 'function',
+                prev     : '*',
             },
             {
-                "blankLine": "always",
-                "next": "function",
-                "prev": "*"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'switch',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "switch"
+                blankLine: 'any',
+                next     : 'switch',
+                prev     : '*',
             },
             {
-                "blankLine": "any",
-                "next": "switch",
-                "prev": "*"
+                blankLine: 'any',
+                next     : '*',
+                prev     : 'case',
             },
             {
-                "blankLine": "any",
-                "next": "*",
-                "prev": "case"
+                blankLine: 'any',
+                next     : 'case',
+                prev     : '*',
             },
+        ],
+        'prefer-arrow-callback': [
+            'warn',
             {
-                "blankLine": "any",
-                "next": "case",
-                "prev": "*"
-            }
+                allowUnboundThis: false,
+            },
         ],
-        "prefer-arrow-callback": [
-            1,
+        'prefer-const': [
+            'warn',
             {
-                "allowUnboundThis": false
-            }
+                destructuring         : 'any',
+                ignoreReadBeforeAssign: false,
+            },
         ],
-        "prefer-const": [
-            1,
+        'prefer-numeric-literals': 'warn',
+        'prefer-object-spread'   : 'warn',
+        'prefer-template'        : 'warn',
+        'rest-spread-spacing'    : ['warn', 'never'],
+        'semi-style'             : ['warn', 'last'],
+        'space-before-blocks'    : ['warn', 'always'],
+        'space-infix-ops'        : 'warn',
+        'space-unary-ops'        : 'warn',
+        'spaced-comment'         : [
+            'warn',
+            'always',
             {
-                "destructuring": "any",
-                "ignoreReadBeforeAssign": false
-            }
+                block: {
+                    exceptions: ['*'],
+                    markers   : ['/'],
+                },
+                line: {
+                    exceptions: ['*'],
+                    markers   : ['/', '#region', '#endregion'],
+                },
+            },
         ],
-        "prefer-destructuring": [
-            1,
+        'switch-colon-spacing': [
+            'warn',
             {
-                "VariableDeclarator": {
-                    "object": true
-                }
-            }
+                after : true,
+                before: true,
+            },
         ],
-        "prefer-exponentiation-operator": 1,
-        "prefer-numeric-literals": 1,
-        "prefer-object-spread": 1,
-        "prefer-template": 1,
-        "quote-props": [
-            1,
-            "consistent"
-        ],
-        "quotes": [
-            1,
-            "double",
-            {
-                "allowTemplateLiterals": true
-            }
-        ],
-        "rest-spread-spacing": [
-            1,
-            "never"
-        ],
-        "semi": [
-            1,
-            "always"
-        ],
-        "semi-spacing": 0,
-        "semi-style": [
-            1,
-            "last"
-        ],
-        "sort-destructure-keys/sort-destructure-keys": [
-            2,
-            {
-                "caseSensitive": true
-            }
-        ],
-        "sort-imports": [
-            1,
-            {
-                "allowSeparatedGroups": false,
-                "ignoreCase": false,
-                "ignoreDeclarationSort": true,
-                "ignoreMemberSort": false,
-                "memberSyntaxSortOrder": [
-                    "none",
-                    "all",
-                    "multiple",
-                    "single"
-                ]
-            }
-        ],
-        "sort-keys": [
-            2,
-            "asc",
-            {
-                "allowLineSeparatedGroups": true,
-                "caseSensitive": true,
-                "minKeys": 2,
-                "natural": false
-            }
-        ],
-        "sort-vars": 1,
-        "space-before-blocks": [
-            1,
-            "always"
-        ],
-        "space-before-function-paren": 1,
-        "space-in-parens": [
-            1,
-            "always",
-            {
-                "exceptions": [
-                    "empty"
-                ]
-            }
-        ],
-        "space-infix-ops": 1,
-        "space-unary-ops": 1,
-        "spaced-comment": [
-            1,
-            "always",
-            {
-                "exceptions": [
-                    "*"
-                ],
-                "markers": [
-                    "/"
-                ]
-            }
-        ],
-        "switch-colon-spacing": [
-            1,
-            {
-                "after": true,
-                "before": true
-            }
-        ],
-        "template-curly-spacing": [
-            1,
-            "always"
-        ],
-        "template-tag-spacing": [
-            1,
-            "never"
-        ],
-        "unicode-bom": [
-            1,
-            "never"
-        ],
-        "wrap-iife": [
-            1,
-            "outside"
-        ],
-        "wrap-regex": 1,
-        "yield-star-spacing": [
-            1,
-            "after"
-        ],
-        "yoda": 2
-    }
+        'template-curly-spacing': ['warn', 'never'],
+        'template-tag-spacing'  : ['warn', 'never'],
+        'unicode-bom'           : ['warn', 'never'],
+        'wrap-iife'             : ['warn', 'outside'],
+        'wrap-regex'            : 'warn',
+    },
+
+    settings: {
+        perfectionist: {
+            ignoreCase        : false,
+            partitionByComment: true,
+            partitionByNewLine: true,
+            type              : 'alphabetical',
+        },
+    },
 };
