@@ -91,6 +91,7 @@ export default {
             },
         ],
         'no-undef'            : 'error',
+        'no-useless-escape'   : 'off',
         'object-curly-newline': [
             'warn',
             {
