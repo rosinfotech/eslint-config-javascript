@@ -67,6 +67,12 @@ export default {
                 },
             },
         ],
+        'no-empty': [
+            'error',
+            {
+                'allowEmptyCatch': true
+            }
+        ],
         'no-implicit-coercion': [
             'warn',
             {

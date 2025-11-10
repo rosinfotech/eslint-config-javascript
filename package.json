@@ -1,6 +1,6 @@
 {
     "name": "@rosinfo.tech/eslint-config-javascript",
-    "version": "0.0.28",
+    "version": "0.0.29",
     "access": "public",
     "main": "index.js",
     "publishConfig": {
