@@ -91,6 +91,18 @@ export default {
             },
         ],
         'no-undef'            : 'error',
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "after-used",
+                "argsIgnorePattern": "^_",
+                "caughtErrors": "all",
+                "caughtErrorsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_",
+                "ignoreRestSiblings": true
+            }
+        ],
         'no-useless-escape'   : 'off',
         'object-curly-newline': [
             'warn',
